@@ -57,5 +57,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "me.levviata.javaApp"
+    mainClass = "me.levviata.levviatasjavapp.javaApp"
 }
