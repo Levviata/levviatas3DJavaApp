@@ -1,5 +1,5 @@
-# App
-An app.
+# Java App
+A Java app.
 
 # Fundation Blocks
 Don't reinvent the wheel.
