@@ -3,15 +3,33 @@
  */
 package me.levviata.levviatasjavapp;
 
-public class javaApp {
+import me.levviata.levviatasjavapp.core.window.VulkanWindow;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class JavaApp {
+    // This will be used later, safely ignore SonarQube.
+    //public static final JavaApp JAVA_APP = new JavaApp();
+
+    public static final Logger logger = LoggerFactory.getLogger(JavaApp.class);
+
+    private static final VulkanWindow window = new VulkanWindow();
+
     public String getGreeting() {
         return "Hello World!";
     }
 
+    // Note: LWJGL does not garbage-collect Vulkan allocations for you, please be careful.
+
     public static void main(String[] args) {
-        while (true)
-        {
-            System.out.println(new javaApp().getGreeting());
-        }
+        window.run();
+    }
+
+    public static Logger getLogger() {
+        return logger;
+    }
+
+    public static VulkanWindow getWindow() {
+        return window;
     }
 }

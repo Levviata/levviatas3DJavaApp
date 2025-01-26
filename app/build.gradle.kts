@@ -23,6 +23,7 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.guava)
 
+    // LWJGL 3
     implementation(platform("org.lwjgl:lwjgl-bom:$lwjglVersion"))
 
     implementation("org.lwjgl", "lwjgl")
@@ -36,6 +37,12 @@ dependencies {
     runtimeOnly("org.lwjgl", "lwjgl-glfw", classifier = lwjglNatives)
     runtimeOnly("org.lwjgl", "lwjgl-openal", classifier = lwjglNatives)
     runtimeOnly("org.lwjgl", "lwjgl-stb", classifier = lwjglNatives)
+    // End of LWJGL
+
+    // Logging system
+    implementation("org.slf4j:slf4j-api:2.0.9")
+    implementation("ch.qos.logback:logback-classic:1.4.11")
+    // End of logging system
 }
 
 testing {
